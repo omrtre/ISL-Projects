@@ -46,18 +46,18 @@ def turn_angle(degree):
 
 def callback(msg):
     iterations = int(input("How many sides? "))
-    degree = float(input("What angle? "))
     i = 0
+    degree = float(input("What angle? "))
     while not rospy.is_shutdown():
         while i < iterations: 
-        #for i in range(iterations):
-            i += 1
+        #for i in range(iterations): 
+            turn_angle(degree)
             forward_one_meter()
             print("Side completed, on to the next!")
-            turn_angle(degree)
-            
+            i += 1
             if i == iterations:
         	    print("Sides completed!")
+        	    rospy.is_shutdown()
 
 pub = rospy.Publisher('/cmd_vel', Twist, queue_size=1)
 sub  = rospy.Subscriber('/odom', Odometry, callback)
