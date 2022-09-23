@@ -68,7 +68,8 @@ def callback(msg):
     while not rospy.is_shutdown():
         for i in range(4):
             forward_one_meter()
-
+            
+            # If objects position (X) is greater than this, then sotp moving.
             if (object.position[0] >= 1):
                 print("Object detected! Stopping.")
                 stop()
