@@ -1,0 +1,34 @@
+MASTER PC
+- UBUNTU 20.04
+- ROS NOETIC
+- ZED SDK UBUNTU 20
+- CUDA 11.6
+
+MASTER PC VARS
+ROS_VERSION=1
+ROS_PYTHON_VERSION=3
+ROS_PACKAGE_PATH=/home/jsoltre1/catkin_ws/src:/opt/ros/noetic/share
+ROSLISP_PACKAGE_DIRECTORIES=/home/jsoltre1/catkin_ws/devel/share/common-lisp
+ROS_ETC_DIR=/opt/ros/noetic/etc/ros
+ROS_MASTER_URI=http://192.168.0.28:11311
+ROS_HOSTNAME=192.168.0.28
+ROS_ROOT=/opt/ros/noetic/share/ros
+ROS_DISTRO=noetic
+
+TURTLEBOT
+- UBUNTU 20.04
+- ROS NOETIC
+- ZED SDK L4T32.7 3.7.7
+- (TEGRA) R32 7.2
+- CUDA 10.2
+
+TURTLEBOT VARS
+ROS_VERSION=1
+ROS_PYTHON_VERSION=3
+ROS_PACKAGE_PATH=/opt/ros/noetic/share
+ROSLISP_PACKAGE_DIRECTORIES=
+ROS_ETC_DIR=/opt/ros/noetic/etc/ros
+ROS_MASTER_URI=http://192.168.0.28:11311
+ROS_HOSTNAME=192.168.0.30
+ROS_ROOT=/opt/ros/noetic/share/ros
+ROS_DISTRO=noetic
