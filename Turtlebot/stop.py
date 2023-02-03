@@ -12,12 +12,19 @@ def callback(msg):
     print (msg.ranges[0])
     print('s3 [90]')
     print(msg.ranges[90])
-    if msg.ranges[0] > 0.5:
+    if msg.ranges[0] > 1:
         move_cmd.linear.x = 0.2
         move_cmd.angular.z = 0.0
-    else:
+    if msg.ranges[0] < 1:
         move_cmd.linear.x = 0.0
-        move_cmd.angular.z = 0.0
+        move_cmd.angular.z = 0.2
+    if msg.ranges[270] < 0.3:
+        move_cmd.linear.x = 0.1
+        move_cmd.angular.z = 0.2
+    if msg.ranges[315] < 0.3:
+        move_cmd.linear.x = 0.0
+        move_cmd.angular.z = 0.2
+
     pub.publish(move_cmd)
 rospy.init_node('laser_data')
 pub = rospy.Publisher('/cmd_vel', Twist, queue_size=10)
