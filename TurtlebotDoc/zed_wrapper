@@ -1,0 +1,262 @@
+SUMMARY
+========
+ * /rosdistro: noetic
+ * /rosversion: 1.15.14
+ * /zed2i/zed2i_description: <?xml version="1....
+ * /zed2i/zed_node/auto_exposure_gain: True
+ * /zed2i/zed_node/auto_whitebalance: True
+ * /zed2i/zed_node/brightness: 4
+ * /zed2i/zed_node/contrast: 4
+ * /zed2i/zed_node/depth/depth_downsample_factor: 0.5
+ * /zed2i/zed_node/depth/depth_stabilization: 1
+ * /zed2i/zed_node/depth/max_depth: 35.0
+ * /zed2i/zed_node/depth/min_depth: 0.7
+ * /zed2i/zed_node/depth/openni_depth_mode: False
+ * /zed2i/zed_node/depth/quality: 1
+ * /zed2i/zed_node/depth/sensing_mode: 0
+ * /zed2i/zed_node/depth_confidence: 30
+ * /zed2i/zed_node/depth_texture_conf: 100
+ * /zed2i/zed_node/exposure: 100
+ * /zed2i/zed_node/gain: 100
+ * /zed2i/zed_node/gamma: 8
+ * /zed2i/zed_node/general/base_frame: base_link
+ * /zed2i/zed_node/general/camera_flip: False
+ * /zed2i/zed_node/general/camera_model: zed2i
+ * /zed2i/zed_node/general/camera_name: zed2i
+ * /zed2i/zed_node/general/gpu_id: -1
+ * /zed2i/zed_node/general/grab_frame_rate: 15
+ * /zed2i/zed_node/general/resolution: 3
+ * /zed2i/zed_node/general/self_calib: True
+ * /zed2i/zed_node/general/serial_number: 0
+ * /zed2i/zed_node/general/svo_compression: 2
+ * /zed2i/zed_node/general/verbose: False
+ * /zed2i/zed_node/general/zed_id: 0
+ * /zed2i/zed_node/hue: 0
+ * /zed2i/zed_node/mapping/clicked_point_topic: /clicked_point
+ * /zed2i/zed_node/mapping/fused_pointcloud_freq: 1.0
+ * /zed2i/zed_node/mapping/mapping_enabled: False
+ * /zed2i/zed_node/mapping/max_mapping_range: -1
+ * /zed2i/zed_node/mapping/resolution: 0.05
+ * /zed2i/zed_node/object_detection/body_fitting: False
+ * /zed2i/zed_node/object_detection/confidence_threshold: 50
+ * /zed2i/zed_node/object_detection/max_range: 15.0
+ * /zed2i/zed_node/object_detection/mc_animal: True
+ * /zed2i/zed_node/object_detection/mc_bag: True
+ * /zed2i/zed_node/object_detection/mc_electronics: True
+ * /zed2i/zed_node/object_detection/mc_fruit_vegetable: True
+ * /zed2i/zed_node/object_detection/mc_people: True
+ * /zed2i/zed_node/object_detection/mc_sport: True
+ * /zed2i/zed_node/object_detection/mc_vehicle: True
+ * /zed2i/zed_node/object_detection/model: 0
+ * /zed2i/zed_node/object_detection/object_tracking_enabled: True
+ * /zed2i/zed_node/object_detection/od_enabled: True
+ * /zed2i/zed_node/point_cloud_freq: 15.0
+ * /zed2i/zed_node/pos_tracking/area_memory: True
+ * /zed2i/zed_node/pos_tracking/area_memory_db_path: zed_area_memory.area
+ * /zed2i/zed_node/pos_tracking/fixed_z_value: 0.0
+ * /zed2i/zed_node/pos_tracking/floor_alignment: False
+ * /zed2i/zed_node/pos_tracking/imu_fusion: True
+ * /zed2i/zed_node/pos_tracking/init_odom_with_first_valid_pose: True
+ * /zed2i/zed_node/pos_tracking/initial_base_pose: [0.0, 0.0, 0.0, 0...
+ * /zed2i/zed_node/pos_tracking/map_frame: map
+ * /zed2i/zed_node/pos_tracking/odometry_frame: odom
+ * /zed2i/zed_node/pos_tracking/path_max_count: -1
+ * /zed2i/zed_node/pos_tracking/path_pub_rate: 2.0
+ * /zed2i/zed_node/pos_tracking/pos_tracking_enabled: True
+ * /zed2i/zed_node/pos_tracking/publish_map_tf: True
+ * /zed2i/zed_node/pos_tracking/publish_tf: True
+ * /zed2i/zed_node/pos_tracking/save_area_memory_db_on_exit: False
+ * /zed2i/zed_node/pos_tracking/two_d_mode: False
+ * /zed2i/zed_node/pub_frame_rate: 15.0
+ * /zed2i/zed_node/saturation: 4
+ * /zed2i/zed_node/sensors/max_pub_rate: 200.0
+ * /zed2i/zed_node/sensors/publish_imu_tf: True
+ * /zed2i/zed_node/sensors/sensors_timestamp_sync: False
+ * /zed2i/zed_node/sharpness: 4
+ * /zed2i/zed_node/stream: 
+ * /zed2i/zed_node/svo_file: 
+ * /zed2i/zed_node/video/extrinsic_in_camera_frame: True
+ * /zed2i/zed_node/video/img_downsample_factor: 0.5
+ * /zed2i/zed_node/whitebalance_temperature: 42
+
+NODES
+  /zed2i/
+    zed2i_state_publisher (robot_state_publisher/robot_state_publisher)
+    zed_node (zed_wrapper/zed_wrapper_node)
+
+ROS_MASTER_URI=http://192.168.0.28:11311
+
+process[zed2i/zed2i_state_publisher-1]: started with pid [15755]
+process[zed2i/zed_node-2]: started with pid [15756]
+[ INFO] [1667845281.488261406]: Initializing nodelet with 4 worker threads.
+[ INFO] [1667845281.726546486]: ********** Starting nodelet '/zed2i/zed_node' **********
+[ INFO] [1667845281.726807661]: SDK version : 3.7.7
+[ INFO] [1667845281.726969053]: *** GENERAL PARAMETERS ***
+[ INFO] [1667845281.734580571]:  * Camera Name			-> zed2i
+[ INFO] [1667845281.757819360]:  * Camera Resolution		-> VGA
+[ INFO] [1667845281.767317795]:  * Camera Grab Framerate	-> 15
+[ INFO] [1667845281.783900764]:  * Gpu ID			-> -1
+[ INFO] [1667845281.800408530]:  * Camera ID			-> -1
+[ INFO] [1667845281.804380056]:  * Verbose			-> DISABLED
+[ INFO] [1667845281.812998360]:  * Camera Flip			-> DISABLED
+[ INFO] [1667845281.826120852]:  * Self calibration		-> ENABLED
+[ INFO] [1667845281.834411685]:  * Camera Model by param	-> zed2i
+[ INFO] [1667845281.834507770]: *** VIDEO PARAMETERS ***
+[ INFO] [1667845281.840698996]:  * Image resample factor	-> 0.5
+[ INFO] [1667845281.845736887]:  * Extrinsic param. frame	-> X RIGHT - Y DOWN - Z FWD
+[ INFO] [1667845281.845881561]: *** DEPTH PARAMETERS ***
+[ INFO] [1667845281.854324777]:  * Depth quality		-> PERFORMANCE
+[ INFO] [1667845281.859682274]:  * Depth Sensing mode		-> STANDARD
+[ INFO] [1667845281.870936597]:  * OpenNI mode			-> DISABLED
+[ INFO] [1667845281.889895606]:  * Depth Stabilization		-> ENABLED
+[ INFO] [1667845281.905147858]:  * Minimum depth		-> 0.7 m
+[ INFO] [1667845281.912250254]:  * Maximum depth		-> 35 m
+[ INFO] [1667845281.921553967]:  * Depth resample factor	-> 0.5
+[ INFO] [1667845281.921967733]: *** POSITIONAL TRACKING PARAMETERS ***
+[ INFO] [1667845281.939230797]:  * Positional tracking		-> ENABLED
+[ INFO] [1667845281.951579815]:  * Path rate			-> 2 Hz
+[ INFO] [1667845281.957669436]:  * Path history size		-> 1
+[ INFO] [1667845281.978294549]:  * Odometry DB path		-> /home/jetson/.ros/zed_area_memory.area
+[ INFO] [1667845282.014522768]:  * Save Area Memory on closing	-> DISABLED
+[ INFO] [1667845282.023451878]:  * Area Memory			-> ENABLED
+[ INFO] [1667845282.031293428]:  * IMU Fusion			-> ENABLED
+[ INFO] [1667845282.040123849]:  * Floor alignment		-> DISABLED
+[ INFO] [1667845282.045652894]:  * Init Odometry with first valid pose data -> ENABLED
+[ INFO] [1667845282.051558364]:  * Two D mode			-> DISABLED
+[ INFO] [1667845282.059430172]: *** MAPPING PARAMETERS ***
+[ INFO] [1667845282.097705711]:  * Mapping			-> DISABLED
+[ INFO] [1667845282.114252797]:  * Clicked point topic		-> /clicked_point
+[ INFO] [1667845282.114533553]: *** OBJECT DETECTION PARAMETERS ***
+[ INFO] [1667845282.131406757]:  * Object Detection		-> ENABLED
+[ INFO] [1667845282.136779201]:  * Object confidence		-> 50
+[ INFO] [1667845282.143012454]:  * Object tracking		-> ENABLED
+[ INFO] [1667845282.147530755]:  * Detection max range		-> 15
+[ INFO] [1667845282.155101235]:  * Detection model		-> MULTI CLASS BOX FAST
+[ INFO] [1667845282.161272202]:  * Detect people		-> ENABLED
+[ INFO] [1667845282.168378192]:  * Detect vehicles		-> ENABLED
+[ INFO] [1667845282.176997538]:  * Detect bags			-> ENABLED
+[ INFO] [1667845282.193438383]:  * Detect animals		-> ENABLED
+[ INFO] [1667845282.199150433]:  * Detect electronics		-> ENABLED
+[ INFO] [1667845282.214434557]:  * Detect fruit and vegetables	-> ENABLED
+[ INFO] [1667845282.217799417]:  * Detect sport-related objects	-> ENABLED
+[ INFO] [1667845282.218017835]: *** SENSORS PARAMETERS ***
+[ INFO] [1667845282.222977712]:  * Sensors timestamp sync	-> DISABLED
+[ INFO] [1667845282.232780964]:  * Max sensors rate		-> 200
+[ INFO] [1667845282.233282743]: *** SVO PARAMETERS ***
+[ INFO] [1667845282.245379647]:  * SVO input file: 		-> 
+[ INFO] [1667845282.248072952]:  * SVO REC compression		-> H265 (HEVC)
+[ INFO] [1667845282.255197065]: *** COORDINATE FRAMES ***
+[ INFO] [1667845282.297530008]:  * map_frame			-> map
+[ INFO] [1667845282.297703065]:  * odometry_frame		-> odom
+[ INFO] [1667845282.297866072]:  * base_frame			-> base_link
+[ INFO] [1667845282.298747244]:  * camera_frame			-> zed2i_camera_center
+[ INFO] [1667845282.299698567]:  * imu_link			-> zed2i_imu_link
+[ INFO] [1667845282.300237217]:  * left_camera_frame		-> zed2i_left_camera_frame
+[ INFO] [1667845282.300913929]:  * left_camera_optical_frame	-> zed2i_left_camera_optical_frame
+[ INFO] [1667845282.301394199]:  * right_camera_frame		-> zed2i_right_camera_frame
+[ INFO] [1667845282.302025706]:  * right_camera_optical_frame	-> zed2i_right_camera_optical_frame
+[ INFO] [1667845282.302513371]:  * depth_frame			-> zed2i_left_camera_frame
+[ INFO] [1667845282.303085300]:  * depth_optical_frame		-> zed2i_left_camera_optical_frame
+[ INFO] [1667845282.303590099]:  * disparity_frame		-> zed2i_left_camera_frame
+[ INFO] [1667845282.304022561]:  * disparity_optical_frame	-> zed2i_left_camera_optical_frame
+[ INFO] [1667845282.304463200]:  * confidence_frame		-> zed2i_left_camera_frame
+[ INFO] [1667845282.304833115]:  * confidence_optical_frame	-> zed2i_left_camera_optical_frame
+[ INFO] [1667845282.349182235]:  * Broadcast odometry TF	-> ENABLED
+[ INFO] [1667845282.366889635]:  * Broadcast map pose TF	-> ENABLED
+[ INFO] [1667845282.381926646]:  * Broadcast IMU pose TF	-> ENABLED
+[ INFO] [1667845282.382310779]: *** DYNAMIC PARAMETERS (Init. values) ***
+[ INFO] [1667845282.410848633]:  * [DYN] Depth confidence	-> 30
+[ INFO] [1667845282.431864232]:  * [DYN] Depth texture conf.	-> 100
+[ INFO] [1667845282.435409493]:  * [DYN] pub_frame_rate		-> 15 Hz
+[ INFO] [1667845282.471776763]:  * [DYN] point_cloud_freq	-> 15 Hz
+[ INFO] [1667845282.476154763]:  * [DYN] brightness		-> 4
+[ INFO] [1667845282.515516717]:  * [DYN] contrast		-> 4
+[ INFO] [1667845282.530688664]:  * [DYN] hue			-> 0
+[ INFO] [1667845282.536654805]:  * [DYN] saturation		-> 4
+[ INFO] [1667845282.543222301]:  * [DYN] sharpness		-> 4
+[ INFO] [1667845282.561939612]:  * [DYN] gamma			-> 8
+[ INFO] [1667845282.621919180]:  * [DYN] auto_exposure_gain	-> ENABLED
+[ INFO] [1667845282.655091835]:  * [DYN] auto_whitebalance	-> ENABLED
+[ INFO] [1667845282.786344663]:  * Camera coordinate system	-> Right HANDED Z UP and X FORWARD
+[ INFO] [1667845282.786597506]:  *** Opening ZED 2i...
+[ INFO] [1667845284.133825190]: ZED connection -> SUCCESS
+[ INFO] [1667845286.134219843]:  ...  ZED ready
+[ INFO] [1667845286.134360404]: ZED SDK running on GPU #0
+[ INFO] [1667845286.143903991]: Camera-IMU Transform: 
+ 557B3D9638
+0.999985 -0.000037 -0.005418 -0.002000
+0.000036 1.000000 -0.000244 -0.023000
+0.005418 0.000244 0.999985 0.000220
+0.000000 0.000000 0.000000 1.000000
+
+[ INFO] [1667845286.144101630]:  * CAMERA MODEL	 -> ZED 2i
+[ INFO] [1667845286.144400614]:  * Serial Number -> 36645751
+[ INFO] [1667845286.144814015]:  * Camera FW Version -> 1523
+[ INFO] [1667845286.144965200]:  * Sensors FW Version -> 777
+[ INFO] [1667845287.578356294]: Advertised on topic /zed2i/zed_node/rgb/image_rect_color
+[ INFO] [1667845287.578762613]: Advertised on topic /zed2i/zed_node/rgb/camera_info
+[ INFO] [1667845287.805153218]: Advertised on topic /zed2i/zed_node/rgb_raw/image_raw_color
+[ INFO] [1667845287.805476679]: Advertised on topic /zed2i/zed_node/rgb_raw/camera_info
+[ INFO] [1667845288.104413455]: Advertised on topic /zed2i/zed_node/left/image_rect_color
+[ INFO] [1667845288.104752436]: Advertised on topic /zed2i/zed_node/left/camera_info
+[ INFO] [1667845288.378080058]: Advertised on topic /zed2i/zed_node/left_raw/image_raw_color
+[ INFO] [1667845288.378385031]: Advertised on topic /zed2i/zed_node/left_raw/camera_info
+[ INFO] [1667845288.720664817]: Advertised on topic /zed2i/zed_node/right/image_rect_color
+[ INFO] [1667845288.720970624]: Advertised on topic /zed2i/zed_node/right/camera_info
+[ INFO] [1667845289.072995230]: Advertised on topic /zed2i/zed_node/right_raw/image_raw_color
+[ INFO] [1667845289.073327805]: Advertised on topic /zed2i/zed_node/right_raw/camera_info
+[ INFO] [1667845289.391719119]: Advertised on topic /zed2i/zed_node/rgb/image_rect_gray
+[ INFO] [1667845289.391837546]: Advertised on topic /zed2i/zed_node/rgb/camera_info
+[ INFO] [1667845289.689408713]: Advertised on topic /zed2i/zed_node/rgb_raw/image_raw_gray
+[ INFO] [1667845289.689817375]: Advertised on topic /zed2i/zed_node/rgb_raw/camera_info
+[ INFO] [1667845289.923042640]: Advertised on topic /zed2i/zed_node/left/image_rect_gray
+[ INFO] [1667845289.923423440]: Advertised on topic /zed2i/zed_node/left/camera_info
+[ INFO] [1667845290.138675338]: Advertised on topic /zed2i/zed_node/left_raw/image_raw_gray
+[ INFO] [1667845290.139112382]: Advertised on topic /zed2i/zed_node/left_raw/camera_info
+[ INFO] [1667845290.411546177]: Advertised on topic /zed2i/zed_node/right/image_rect_gray
+[ INFO] [1667845290.411888647]: Advertised on topic /zed2i/zed_node/right/camera_info
+[ INFO] [1667845290.631485215]: Advertised on topic /zed2i/zed_node/right_raw/image_raw_gray
+[ INFO] [1667845290.631900022]: Advertised on topic /zed2i/zed_node/right_raw/camera_info
+[ INFO] [1667845290.852957034]: Advertised on topic /zed2i/zed_node/depth/depth_registered
+[ INFO] [1667845290.853324971]: Advertised on topic /zed2i/zed_node/depth/camera_info
+[ INFO] [1667845291.064707678]: Advertised on topic /zed2i/zed_node/stereo/image_rect_color
+[ INFO] [1667845291.319488078]: Advertised on topic /zed2i/zed_node/stereo_raw/image_raw_color
+[ INFO] [1667845291.327009083]: Advertised on topic /zed2i/zed_node/confidence/confidence_map
+[ INFO] [1667845291.329989289]: Advertised on topic /zed2i/zed_node/disparity/disparity_image
+[ INFO] [1667845291.342203840]: Advertised on topic /zed2i/zed_node/point_cloud/cloud_registered
+[ INFO] [1667845291.356698867]: Advertised on topic /zed2i/zed_node/obj_det/objects
+[ INFO] [1667845291.365213587]: Advertised on topic /zed2i/zed_node/pose
+[ INFO] [1667845291.377741912]: Advertised on topic /zed2i/zed_node/pose_with_covariance
+[ INFO] [1667845291.387534071]: Advertised on topic /zed2i/zed_node/odom
+[ INFO] [1667845291.448996164]: Advertised on topic /zed2i/zed_node/path_odom
+[ INFO] [1667845291.459042520]: Advertised on topic /zed2i/zed_node/path_map
+[ INFO] [1667845291.468515280]: Advertised on topic /zed2i/zed_node/imu/data
+[ INFO] [1667845291.473632747]: Advertised on topic /zed2i/zed_node/imu/data_raw
+[ INFO] [1667845291.480338928]: Advertised on topic /zed2i/zed_node/imu/mag
+[ INFO] [1667845291.489451980]: Advertised on topic /zed2i/zed_node/temperature/imu
+[ INFO] [1667845291.507465396]: Advertised on topic /zed2i/zed_node/atm_press
+[ INFO] [1667845291.539444666]: Advertised on topic /zed2i/zed_node/temperature/left
+[ INFO] [1667845291.554656921]: Advertised on topic /zed2i/zed_node/temperature/right
+[ INFO] [1667845291.562758032]: Advertised on topic /zed2i/zed_node/left_cam_imu_transform [LATCHED]
+[ INFO] [1667845291.595326104]: Subscribed to topic /clicked_point
+[ INFO] [1667845291.673812690]: *** Starting Positional Tracking ***
+[ INFO] [1667845291.674010901]:  * Waiting for valid static transformations...
+[ INFO] [1667845291.674270149]: Static transform Sensor to Base [zed2i_left_camera_frame -> base_link]
+[ INFO] [1667845291.674402586]:  * Translation: {0.000,-0.060,-0.015}
+[ INFO] [1667845291.674501952]:  * Rotation: {0.000,-0.000,0.000}
+[ INFO] [1667845291.674613921]: Static transform Sensor to Camera Center [zed2i_left_camera_frame -> zed2i_camera_center]
+[ INFO] [1667845291.674719329]:  * Translation: {0.000,-0.060,0.000}
+[ INFO] [1667845291.674845359]: Published static transform 'zed2i_imu_link' -> 'zed2i_left_camera_frame'
+[ INFO] [1667845291.676464331]:  * Rotation: {0.000,-0.000,0.000}
+[ INFO] [1667845291.676665772]: Static transform Camera Center to Base [zed2i_camera_center -> base_link]
+[ INFO] [1667845291.676760399]:  * Translation: {0.000,0.000,-0.015}
+[ INFO] [1667845291.676852318]:  * Rotation: {0.000,-0.000,0.000}
+[ INFO] [1667845291.777090167]: Initial ZED left camera pose (ZED pos. tracking): 
+[ INFO] [1667845291.777479716]:  * T: [0,0.06,0.015]
+[ INFO] [1667845291.777941290]:  * Q: [0,0,0,1]
+[ WARN] [1667845291.778324642]: area_memory_db_path [/home/jetson/.ros/zed_area_memory.area] doesn't exist or is unreachable. 
+[ INFO] [1667845292.425987511]: *** Starting Object Detection ***
+[ INFO] [1667845301.282711940]: Positional tracking -> Searching for a known position [SEARCHING]
+[ INFO] [1667845301.282976552]: Odometry aligned to last tracking pose
+[ INFO] [1667845301.338348348]: Positional tracking -> OK [OK]
+

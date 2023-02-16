@@ -1,0 +1,8 @@
+[ERROR] [1667845398.329518]: bad callback: <function callback at 0x7f5e1b22a280>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "turtlebotLinearObjDet.py", line 23, in callback
+    for i in objects:
+TypeError: 'ObjectsStamped' object is not iterable
+

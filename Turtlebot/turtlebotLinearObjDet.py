@@ -8,82 +8,28 @@ from turtle import distance, forward, position, speed
 
 from numpy import empty
 import rospy
-from geometry_msgs.msg import Twist, Point
-from sensor_msgs.msg import LaserScan 
-from nav_msgs.msg import Odometry
+#from geometry_msgs.msg import Twist, Point
+#from nav_msgs.msg import Odometry
 from zed_interfaces.msg import Object
+from zed_interfaces.msg import ObjectsStamped
 
-rospy.init_node('square')
-var = Twist()
-odom = Odometry()
-goal = Point()
-object = Object()
-
-
-def stop():
-    var.linear.x = 0.0
-    var.angular.z = 0.0
-    pub.publish(var)
-
-#def turn_left():
-#    var.linear.x = .2
-#    var.angular.z = 0.3
-#    pub.publish(var)
-
-def forward_one_meter():
-    one_meter = 1
-    var.linear.x = .2
-    i = 1
-    time1 = rospy.Time.now().to_sec()
-    #while i == True:
-
-    start_dist = 0
-    while start_dist < one_meter:
-        pub.publish(var)
-        time2 = rospy.Time.now().to_sec()
-        start_dist = .2 * (time2 - time1)
-
-    var.linear.x = 0
-    pub.publish(var)
-    #   i == False
-
-#def turn_90():
-#    degree = 1.5
-#    var.angular.z = .22
-#    i = 1
-#    time1 = rospy.Time.now().to_sec()
-#    #while i == True:
-#
-#    start_dist = 0
-#    while start_dist < degree:
-#        pub.publish(var)
-#        time2 = rospy.Time.now().to_sec()
-#        start_dist = .2 * (time2 - time1)
-#    #i == False
-#    var.angular.z = 0
-#    pub.publish(var)
-
+objects = ObjectsStamped()
+postObjx = Object()
 
 def callback(msg):
     while not rospy.is_shutdown():
-        for i in range(4):
-            forward_one_meter()
-            
-            # If objects position (X) is greater than this, then sotp moving.
-            if (object.position[0] >= 1):
-                print("Object detected! Stopping.")
-                stop()
+    	objXThreshold = 2.0
+    	
+    	for i in objects:
+    		if (objects[i].position[0] >= objThreshold):
+    			print("Object" + str(objects[i].label) + "detected, position close by.")
 
+def listenerObjX():
 
+    rospy.init_node('listenerObjx', anonymous = True)
+    subObjlist = rospy.Subscriber('/zed2i/zed_node/obj_det/objects', ObjectsStamped, callback)
+    #subZedOdom = rospy.Subscriber('/zed2i/zed_node/odom', callback)
+    rospy.spin()
 
-
-
-#    rospy.timer(rospy.Duration(4), straight())
-#    rospy.timer(rospy.Duration(4), turn_left())
-
-
-pub = rospy.Publisher('/cmd_vel', Twist, queue_size=1)
-sub  = rospy.Subscriber('/odom', Odometry, callback)
-objSub = rospy.Subscriber('/Object')
-rate = rospy.Rate(5)
-rospy.spin()
+if __name__ == '__main__':
+    listenerObjX()
